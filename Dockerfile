@@ -14,7 +14,7 @@ FROM python:3.9-slim
 
 WORKDIR /app
 
-COPY --from=backend-Builder /app/backend .
+COPY --from=backend-Builder /app .
 COPY --from=backend-Builder /usr/local/lib/python3.9/site-packages/ /usr/local/lib/python3.9/site-packages/
 
 EXPOSE 8000
